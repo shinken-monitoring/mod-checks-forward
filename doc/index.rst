@@ -1,23 +1,16 @@
 .. _gpli_checks_forward_module:
 
 =========================
-Shinken GLPI integration 
+Checks forward
 =========================
 
 
-Shinken supports importing hosts from GLPI through the import-gpi module. It is also possible to define routing rules to forward checks results to an alternate NSCA server. This is what this module is made for.
+This module is a broker module that builds NSCA messages from host/service checks. The idea is to "forward" the checks results to another instance of Shinken ... nice feature to simulate high traffic on testing environment !
 
 
 Requirements 
 =============
 
-  - Compatible version of GLPI Shinken module and GLPI version
-
-The current version needs: 
- - plugin monitoring 0.84+1.1 for GLPI.
- - plugin WebServices for GLPI
-
- See https://forge.indepnet.net to get the plugins.
 
 
 Enabling Checks forward module 
@@ -38,7 +31,7 @@ To use the checks-forward module you must declare it in your broker configuratio
 The module configuration is defined in the file: checks-forward.cfg.
 
 Default behaviour is that none of the checks are managed. 
-For each GLPI entity you wih to forward checks for, you need to add its Id to the glpi_entities parameter.
+For each GLPI entity you wish to forward checks for, you need to add its Id to the glpi_entities parameter.
 
 ::
 
